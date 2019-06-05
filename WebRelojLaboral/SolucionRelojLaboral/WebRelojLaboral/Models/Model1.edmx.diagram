@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="23b90986f5e0432394e53aaa79418191" Name="Diagram1">
+        <EntityTypeShape EntityType="RelojLaboralModel.RL_Asistencia" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="RelojLaboralModel.RL_CalendarioEstado" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RelojLaboralModel.RL_CalendarioPersonal" Width="1.5" PointX="5.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RelojLaboralModel.RL_Dia" Width="1.5" PointX="6" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RelojLaboralModel.RL_Geolocalizacion" Width="1.5" PointX="6" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RelojLaboralModel.RL_HorarioPersonal" Width="1.5" PointX="8.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RelojLaboralModel.RL_HorarioTipo" Width="1.5" PointX="6" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RelojLaboralModel.RL_Notificaciones" Width="1.5" PointX="6" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RelojLaboralModel.RL_Permisos" Width="1.5" PointX="6" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RelojLaboralModel.RL_PreferenciaPersonal" Width="1.5" PointX="8.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RelojLaboralModel.RL_Preferencias" Width="1.5" PointX="6" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RelojLaboralModel.RL_Roles" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RelojLaboralModel.RL_Ubigeo" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RelojLaboralModel.RL_Usuario" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="RelojLaboralModel.RL_UsuarioEstado" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RelojLaboralModel.RL_UsuarioGrupo" Width="1.5" PointX="5.25" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="RelojLaboralModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="RelojLaboralModel.FK_RL_Asistencia_RL_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="RelojLaboralModel.FK__RL_Calend__nEsCI__0E6E26BF" ManuallyRouted="false" />
+        <AssociationConnector Association="RelojLaboralModel.FK__RL_Calend__nDiaI__0C85DE4D" ManuallyRouted="false" />
+        <AssociationConnector Association="RelojLaboralModel.FK__RL_Calend__nUsuI__0D7A0286" ManuallyRouted="false" />
+        <AssociationConnector Association="RelojLaboralModel.FK_RL_Horarios_RL_Dia" ManuallyRouted="false" />
+        <AssociationConnector Association="RelojLaboralModel.FK_RL_PreferenciaIndividual_RL_Geolocalizacion" ManuallyRouted="false" />
+        <AssociationConnector Association="RelojLaboralModel.FK_RL_HorarioPersonal_RL_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="RelojLaboralModel.FK_RL_Horarios_RL_HorarioTipo" ManuallyRouted="false" />
+        <AssociationConnector Association="RelojLaboralModel.FK_RL_PreferenciaIndividual_RL_Notificaciones" ManuallyRouted="false" />
+        <AssociationConnector Association="RelojLaboralModel.FK_RL_PreferenciaIndividual_RL_Permisos" ManuallyRouted="false" />
+        <AssociationConnector Association="RelojLaboralModel.FK_RL_PreferenciaIndividual_RL_Preferencias" ManuallyRouted="false" />
+        <AssociationConnector Association="RelojLaboralModel.FK_RL_PreferenciaIndividual_RL_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="RelojLaboralModel.FK_RL_Usuario_RL_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="RelojLaboralModel.FK_RL_Usuario_RL_Ubigeo" ManuallyRouted="false" />
+        <AssociationConnector Association="RelojLaboralModel.FK_RL_Usuario_RL_UsuarioEstado" ManuallyRouted="false" />
+        <AssociationConnector Association="RelojLaboralModel.FK_RL_UsuarioGrupo_RL_Usuario" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

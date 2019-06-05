@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RelojLaboralModelStoreContainer" CdmEntityContainer="RelojLaboralEntities">
+    <EntitySetMapping Name="RL_Asistencia">
+      <EntityTypeMapping TypeName="RelojLaboralModel.RL_Asistencia">
+        <MappingFragment StoreEntitySet="RL_Asistencia">
+          <ScalarProperty Name="nAsiId" ColumnName="nAsiId" />
+          <ScalarProperty Name="nUsuId" ColumnName="nUsuId" />
+          <ScalarProperty Name="cAsiIp" ColumnName="cAsiIp" />
+          <ScalarProperty Name="cAsiHoraInicio" ColumnName="cAsiHoraInicio" />
+          <ScalarProperty Name="cAsiHoraFinal" ColumnName="cAsiHoraFinal" />
+          <ScalarProperty Name="cAsiDispositivo" ColumnName="cAsiDispositivo" />
+          <ScalarProperty Name="cAsiFecha" ColumnName="cAsiFecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RL_CalendarioEstado">
+      <EntityTypeMapping TypeName="RelojLaboralModel.RL_CalendarioEstado">
+        <MappingFragment StoreEntitySet="RL_CalendarioEstado">
+          <ScalarProperty Name="nCaEId" ColumnName="nCaEId" />
+          <ScalarProperty Name="nCaENombre" ColumnName="nCaENombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RL_CalendarioPersonal">
+      <EntityTypeMapping TypeName="RelojLaboralModel.RL_CalendarioPersonal">
+        <MappingFragment StoreEntitySet="RL_CalendarioPersonal">
+          <ScalarProperty Name="nCaIId" ColumnName="nCaIId" />
+          <ScalarProperty Name="nDiaId" ColumnName="nDiaId" />
+          <ScalarProperty Name="nUsuId" ColumnName="nUsuId" />
+          <ScalarProperty Name="nEsCId" ColumnName="nEsCId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RL_Dia">
+      <EntityTypeMapping TypeName="RelojLaboralModel.RL_Dia">
+        <MappingFragment StoreEntitySet="RL_Dia">
+          <ScalarProperty Name="nDiaId" ColumnName="nDiaId" />
+          <ScalarProperty Name="cDiaNombre" ColumnName="cDiaNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RL_Geolocalizacion">
+      <EntityTypeMapping TypeName="RelojLaboralModel.RL_Geolocalizacion">
+        <MappingFragment StoreEntitySet="RL_Geolocalizacion">
+          <ScalarProperty Name="nGeoId" ColumnName="nGeoId" />
+          <ScalarProperty Name="cGeoDescripcion" ColumnName="cGeoDescripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RL_HorarioPersonal">
+      <EntityTypeMapping TypeName="RelojLaboralModel.RL_HorarioPersonal">
+        <MappingFragment StoreEntitySet="RL_HorarioPersonal">
+          <ScalarProperty Name="nHoPId" ColumnName="nHoPId" />
+          <ScalarProperty Name="nHoTId" ColumnName="nHoTId" />
+          <ScalarProperty Name="nDiaId" ColumnName="nDiaId" />
+          <ScalarProperty Name="nUsuId" ColumnName="nUsuId" />
+          <ScalarProperty Name="cHoPInicio" ColumnName="cHoPInicio" />
+          <ScalarProperty Name="cHoPFinal" ColumnName="cHoPFinal" />
+          <ScalarProperty Name="cHoPZonaHoraria" ColumnName="cHoPZonaHoraria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RL_HorarioTipo">
+      <EntityTypeMapping TypeName="RelojLaboralModel.RL_HorarioTipo">
+        <MappingFragment StoreEntitySet="RL_HorarioTipo">
+          <ScalarProperty Name="nHoTId" ColumnName="nHoTId" />
+          <ScalarProperty Name="cHoTDescripcion" ColumnName="cHoTDescripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RL_Notificaciones">
+      <EntityTypeMapping TypeName="RelojLaboralModel.RL_Notificaciones">
+        <MappingFragment StoreEntitySet="RL_Notificaciones">
+          <ScalarProperty Name="nNotId" ColumnName="nNotId" />
+          <ScalarProperty Name="cNotDescripcion" ColumnName="cNotDescripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RL_Permisos">
+      <EntityTypeMapping TypeName="RelojLaboralModel.RL_Permisos">
+        <MappingFragment StoreEntitySet="RL_Permisos">
+          <ScalarProperty Name="nPerId" ColumnName="nPerId" />
+          <ScalarProperty Name="nPerDescripcion" ColumnName="nPerDescripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RL_PreferenciaPersonal">
+      <EntityTypeMapping TypeName="RelojLaboralModel.RL_PreferenciaPersonal">
+        <MappingFragment StoreEntitySet="RL_PreferenciaPersonal">
+          <ScalarProperty Name="nPInId" ColumnName="nPInId" />
+          <ScalarProperty Name="nPreId" ColumnName="nPreId" />
+          <ScalarProperty Name="nUsuId" ColumnName="nUsuId" />
+          <ScalarProperty Name="nPerId" ColumnName="nPerId" />
+          <ScalarProperty Name="nNotId" ColumnName="nNotId" />
+          <ScalarProperty Name="nGeoId" ColumnName="nGeoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RL_Preferencias">
+      <EntityTypeMapping TypeName="RelojLaboralModel.RL_Preferencias">
+        <MappingFragment StoreEntitySet="RL_Preferencias">
+          <ScalarProperty Name="nPreId" ColumnName="nPreId" />
+          <ScalarProperty Name="cPreDescripcion" ColumnName="cPreDescripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RL_Roles">
+      <EntityTypeMapping TypeName="RelojLaboralModel.RL_Roles">
+        <MappingFragment StoreEntitySet="RL_Roles">
+          <ScalarProperty Name="nRolId" ColumnName="nRolId" />
+          <ScalarProperty Name="cRolNombre" ColumnName="cRolNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RL_Ubigeo">
+      <EntityTypeMapping TypeName="RelojLaboralModel.RL_Ubigeo">
+        <MappingFragment StoreEntitySet="RL_Ubigeo">
+          <ScalarProperty Name="nUbiId" ColumnName="nUbiId" />
+          <ScalarProperty Name="cUbiDescripcion" ColumnName="cUbiDescripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RL_Usuario">
+      <EntityTypeMapping TypeName="RelojLaboralModel.RL_Usuario">
+        <MappingFragment StoreEntitySet="RL_Usuario">
+          <ScalarProperty Name="nUsuId" ColumnName="nUsuId" />
+          <ScalarProperty Name="nUbiId" ColumnName="nUbiId" />
+          <ScalarProperty Name="nRolId" ColumnName="nRolId" />
+          <ScalarProperty Name="cUsuNombre" ColumnName="cUsuNombre" />
+          <ScalarProperty Name="cUsuApellido" ColumnName="cUsuApellido" />
+          <ScalarProperty Name="cUsuDNI" ColumnName="cUsuDNI" />
+          <ScalarProperty Name="cUsuCelular1" ColumnName="cUsuCelular1" />
+          <ScalarProperty Name="cUsuCelular2" ColumnName="cUsuCelular2" />
+          <ScalarProperty Name="cUsuEmail" ColumnName="cUsuEmail" />
+          <ScalarProperty Name="cUsuDomicilio" ColumnName="cUsuDomicilio" />
+          <ScalarProperty Name="cUsuPassword" ColumnName="cUsuPassword" />
+          <ScalarProperty Name="nUsEId" ColumnName="nUsEId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RL_UsuarioEstado">
+      <EntityTypeMapping TypeName="RelojLaboralModel.RL_UsuarioEstado">
+        <MappingFragment StoreEntitySet="RL_UsuarioEstado">
+          <ScalarProperty Name="nUsEId" ColumnName="nUsEId" />
+          <ScalarProperty Name="cUsEDescripcion" ColumnName="cUsEDescripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RL_UsuarioGrupo">
+      <EntityTypeMapping TypeName="RelojLaboralModel.RL_UsuarioGrupo">
+        <MappingFragment StoreEntitySet="RL_UsuarioGrupo">
+          <ScalarProperty Name="nUsGId" ColumnName="nUsGId" />
+          <ScalarProperty Name="nUsuId" ColumnName="nUsuId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="RelojLaboralModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectCalendarioIndividual" FunctionName="RelojLaboralModel.Store.SelectCalendarioIndividual" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="RelojLaboralModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="RelojLaboralModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_del_RL_HorarioPersonal" FunctionName="RelojLaboralModel.Store.sp_del_RL_HorarioPersonal" />
+    <FunctionImportMapping FunctionImportName="sp_del_RL_Usuario" FunctionName="RelojLaboralModel.Store.sp_del_RL_Usuario" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="RelojLaboralModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_get_RL_Dia" FunctionName="RelojLaboralModel.Store.sp_get_RL_Dia">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RelojLaboralModel.sp_get_RL_Dia_Result">
+          <ScalarProperty Name="nDiaId" ColumnName="nDiaId" />
+          <ScalarProperty Name="cDiaNombre" ColumnName="cDiaNombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_get_RL_HorarioTipo" FunctionName="RelojLaboralModel.Store.sp_get_RL_HorarioTipo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RelojLaboralModel.sp_get_RL_HorarioTipo_Result">
+          <ScalarProperty Name="nHoTId" ColumnName="nHoTId" />
+          <ScalarProperty Name="cHoTDescripcion" ColumnName="cHoTDescripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_get_RL_Roles" FunctionName="RelojLaboralModel.Store.sp_get_RL_Roles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RelojLaboralModel.sp_get_RL_Roles_Result">
+          <ScalarProperty Name="nRolId" ColumnName="nRolId" />
+          <ScalarProperty Name="cRolNombre" ColumnName="cRolNombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_get_RL_Ubigeo" FunctionName="RelojLaboralModel.Store.sp_get_RL_Ubigeo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RelojLaboralModel.sp_get_RL_Ubigeo_Result">
+          <ScalarProperty Name="nUbiId" ColumnName="nUbiId" />
+          <ScalarProperty Name="cUbiDescripcion" ColumnName="cUbiDescripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_get_RL_Usuario" FunctionName="RelojLaboralModel.Store.sp_get_RL_Usuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RelojLaboralModel.sp_get_RL_Usuario_Result">
+          <ScalarProperty Name="nUsuId" ColumnName="nUsuId" />
+          <ScalarProperty Name="cUsuNombre" ColumnName="cUsuNombre" />
+          <ScalarProperty Name="cUsuApellido" ColumnName="cUsuApellido" />
+          <ScalarProperty Name="cRolNombre" ColumnName="cRolNombre" />
+          <ScalarProperty Name="cUbiDescripcion" ColumnName="cUbiDescripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_get_RL_UsuarioEstado" FunctionName="RelojLaboralModel.Store.sp_get_RL_UsuarioEstado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RelojLaboralModel.sp_get_RL_UsuarioEstado_Result">
+          <ScalarProperty Name="nUsEId" ColumnName="nUsEId" />
+          <ScalarProperty Name="cUsEDescripcion" ColumnName="cUsEDescripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getDNI_RL_Usuario" FunctionName="RelojLaboralModel.Store.sp_getDNI_RL_Usuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RelojLaboralModel.sp_getDNI_RL_Usuario_Result">
+          <ScalarProperty Name="cUsuNombre" ColumnName="cUsuNombre" />
+          <ScalarProperty Name="cUsuApellido" ColumnName="cUsuApellido" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getId_RL_Horario" FunctionName="RelojLaboralModel.Store.sp_getId_RL_Horario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RelojLaboralModel.sp_getId_RL_Horario_Result">
+          <ScalarProperty Name="nHoPId" ColumnName="nHoPId" />
+          <ScalarProperty Name="nUsuId" ColumnName="nUsuId" />
+          <ScalarProperty Name="cUsuNombre" ColumnName="cUsuNombre" />
+          <ScalarProperty Name="cDiaNombre" ColumnName="cDiaNombre" />
+          <ScalarProperty Name="cHoPInicio" ColumnName="cHoPInicio" />
+          <ScalarProperty Name="cHoPFinal" ColumnName="cHoPFinal" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getId_RL_Usuario" FunctionName="RelojLaboralModel.Store.sp_getId_RL_Usuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RelojLaboralModel.sp_getId_RL_Usuario_Result">
+          <ScalarProperty Name="nUsuId" ColumnName="nUsuId" />
+          <ScalarProperty Name="nUbiId" ColumnName="nUbiId" />
+          <ScalarProperty Name="nRolId" ColumnName="nRolId" />
+          <ScalarProperty Name="cUsuNombre" ColumnName="cUsuNombre" />
+          <ScalarProperty Name="cUsuApellido" ColumnName="cUsuApellido" />
+          <ScalarProperty Name="cUsuDNI" ColumnName="cUsuDNI" />
+          <ScalarProperty Name="cUsuCelular1" ColumnName="cUsuCelular1" />
+          <ScalarProperty Name="cUsuCelular2" ColumnName="cUsuCelular2" />
+          <ScalarProperty Name="cUsuEmail" ColumnName="cUsuEmail" />
+          <ScalarProperty Name="cUsuDomicilio" ColumnName="cUsuDomicilio" />
+          <ScalarProperty Name="cUsuPassword" ColumnName="cUsuPassword" />
+          <ScalarProperty Name="nUsEId" ColumnName="nUsEId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getValida_RL_Usuario" FunctionName="RelojLaboralModel.Store.sp_getValida_RL_Usuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RelojLaboralModel.sp_getValida_RL_Usuario_Result">
+          <ScalarProperty Name="nUsuId" ColumnName="nUsuId" />
+          <ScalarProperty Name="nUbiId" ColumnName="nUbiId" />
+          <ScalarProperty Name="nRolId" ColumnName="nRolId" />
+          <ScalarProperty Name="cUsuNombre" ColumnName="cUsuNombre" />
+          <ScalarProperty Name="cUsuApellido" ColumnName="cUsuApellido" />
+          <ScalarProperty Name="cUsuDNI" ColumnName="cUsuDNI" />
+          <ScalarProperty Name="cUsuCelular1" ColumnName="cUsuCelular1" />
+          <ScalarProperty Name="cUsuCelular2" ColumnName="cUsuCelular2" />
+          <ScalarProperty Name="cUsuEmail" ColumnName="cUsuEmail" />
+          <ScalarProperty Name="cUsuDomicilio" ColumnName="cUsuDomicilio" />
+          <ScalarProperty Name="cUsuPassword" ColumnName="cUsuPassword" />
+          <ScalarProperty Name="nUsEId" ColumnName="nUsEId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getX_RL_Usuario" FunctionName="RelojLaboralModel.Store.sp_getX_RL_Usuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RelojLaboralModel.sp_getX_RL_Usuario_Result">
+          <ScalarProperty Name="cUsuNombre" ColumnName="cUsuNombre" />
+          <ScalarProperty Name="cUsuApellido" ColumnName="cUsuApellido" />
+          <ScalarProperty Name="cRolNombre" ColumnName="cRolNombre" />
+          <ScalarProperty Name="cUbiDescripcion" ColumnName="cUbiDescripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="RelojLaboralModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RelojLaboralModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="RelojLaboralModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RelojLaboralModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ins_RL_Asistencia" FunctionName="RelojLaboralModel.Store.sp_ins_RL_Asistencia" />
+    <FunctionImportMapping FunctionImportName="sp_ins_RL_HorarioPersonal" FunctionName="RelojLaboralModel.Store.sp_ins_RL_HorarioPersonal" />
+    <FunctionImportMapping FunctionImportName="sp_ins_RL_Usuario" FunctionName="RelojLaboralModel.Store.sp_ins_RL_Usuario" />
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="RelojLaboralModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upd_RL_Usuario" FunctionName="RelojLaboralModel.Store.sp_upd_RL_Usuario" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="RelojLaboralModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

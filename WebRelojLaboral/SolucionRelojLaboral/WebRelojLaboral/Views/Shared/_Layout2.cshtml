@@ -1,0 +1,233 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>_Layout2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
+    <link href="~/Content/css/menu.css" rel="stylesheet" />
+    <link href="~/Content/css/cardLista.css" rel="stylesheet" />
+
+    <script src="~/Scripts/js/Horario.js"></script>
+    <script src="~/Scripts/js/Calendario.js"></script>
+    <script src="~/Scripts/js/Maestros.js"></script>
+    <script src="~/Scripts/js/main.js"></script>
+    <script src="~/Scripts/js/Usuario.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="height: 80px; background-color: #00838f">
+        <div class="navbar-header" style="width: 100%">
+            <table style="width: 100%">
+                <tr>
+                    <td style="width: 10%">
+                        <img src="~/Component/img/logo.png" width="242" height="50" />
+                    </td>
+                    <td style="width: 80%">
+                        <h2>&nbsp;<strong> SISCE </strong></h2>
+                    </td>
+                    <td style="width: 10%">
+                        <div class="dropdown pull-right">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <center><img src="~/Component/img/user01.png" alt="user-picture" class="img-responsive img-circle center-box" width="30"></center>
+                                <span class="all-tittles">USUARIO</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#"><i class="fa fa-user fa-fw"></i>Perfil</a></li>
+                                <li><a href="#"><i class="fa fa-gear fa-fw"></i>Configuracion</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#"><i class="fa fa-sign-out fa-fw"></i>Salir</a></li>
+                            </ul>
+                            &nbsp;&nbsp;
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <div class="wrapper">
+
+        <nav id="sidebar">
+
+            <div class="container-fluid">
+                <a id="sidebarCollapse" class="tex-info navbar-btn pull-right">
+                    <h3><i class="glyphicon glyphicon-align-justify"></i></h3>
+                </a>
+            </div>
+
+            <div>
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-home" id="colorIcono"></i>SISCE
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#expediente" data-toggle="collapse" aria-expanded="false">
+                            <i class="glyphicon glyphicon-globe" id="colorIcono"></i>
+                            Expedientes
+                        </a>
+                        <ul class="collapse list-unstyled" id="expediente">
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Expedientes/RegExpedienteEx');" id="subitentamaño">Reg. Expediente</a></li>
+                        </ul>
+                    </li>
+                    <li id="">
+                        <a href="#seguimiento" data-toggle="collapse" aria-expanded="false">
+                            <i class="glyphicon glyphicon-duplicate" id="colorIcono"></i>Seguimiento
+                        </a>
+                        <ul class="collapse list-unstyled " id="seguimiento">
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Seguimiento/SEGUI_ConsultarExpediente')" id="abierto">Consultar Expediente</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Seguimiento/SEGUI_Documento')" id="subitentamaño">Documento</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Seguimiento/AlarmarEx')" id="subitentamaño">Alarmas</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Seguimiento/SegExpedienteEx')" id="subitentamaño">Seg. de Expedientes</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Seguimiento/SEGUI_Verificacion')" id="subitentamaño">Evaluación de Forma</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#generación" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-pencil" id="colorIcono"></i>Generación</a>
+                        <ul class="collapse list-unstyled" id="generación">
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Generacion/Buscar')" id="subitentamaño">Buscar</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Generacion/Solicitud')" id="subitentamaño">Solicitud</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Generacion/Unidades')" id="subitentamaño">Unidades</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Generacion/EstudioDeImpactoAmbiental')" id="subitentamaño">Est. Ambiental</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Generacion/DerechoDeUsoDeAguas')" id="subitentamaño">Derechos de Agua</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Generacion/PlanosAdjuntos')" id="subitentamaño">Planos Adj.</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Generacion/Presupuesto')" id="subitentamaño">Presupuesto</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Generacion/CronogramaDeEjecucion')" id="subitentamaño">Cronog. Ejec.</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Generacion/Garantia')" id="subitentamaño">Garantía</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Generacion/RepresentanteLegal')" id="subitentamaño">Rep. Legal</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#trasmision" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-random" id="colorIcono"></i>Transmisión</a>
+                        <ul class="collapse list-unstyled" id="trasmision">
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Transmision/BuscarTransmision')" id="subitentamaño">Buscar</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Transmision/SolicitudTransmision')" id="subitentamaño">Solicitud</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Transmision/LineasTransmision')" id="subitentamaño">Lineas</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Transmision/DiagUnifilaresTransmision')" id="subitentamaño">Diag. Unifilares</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Transmision/PlanosAdjuntosTrans')" id="subitentamaño">Planos Adj.</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Transmision/EstAmbientalTransmision')" id="subitentamaño">Est. Ambiental</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Transmision/PresupuestoTransmision')" id="subitentamaño">Presupuesto</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Transmision/CronoEjecTransmision')" id="subitentamaño">Cronog. Ejec.</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Transmision/GarantiaTransmision')" id="subitentamaño">Garantía</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Transmision/RepresentanteLegalTrans')" id="subitentamaño">Rep. Legal</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#distribución" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-phone" id="colorIcono"></i>Distribución</a>
+                        <ul class="collapse list-unstyled" id="distribución">
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Distribucion/BuscarDist')" id="subitentamaño">Buscar</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Distribucion/SolicitudDis')" id="subitentamaño">Solicitud</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Distribucion/ZonadeDistDis')" id="subitentamaño">Zonas de Dist.</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Distribucion/PlanosAdjuntosDist')" id="subitentamaño">Planos Adj.</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Distribucion/EstAmbientalDis')" id="subitentamaño">Est. Ambiental</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Distribucion/PresupuestoDistribucion')" id="subitentamaño">Presupuesto</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Distribucion/CronEjecDis')" id="subitentamaño">Cronog. Ejec.</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Distribucion/GarantiaDis')" id="subitentamaño">Garantía</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Distribucion/RepresentanteLegalDist')" id="subitentamaño">Rep. Legal</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="#servidumbre" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-inbox" id="colorIcono"></i>Servidumbre</a>
+                        <ul class="collapse list-unstyled" id="servidumbre">
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Servidumbre/BuscarServ')" id="subitentamaño">Buscar</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Servidumbre/SolicitudServ')" id="subitentamaño">Solicitud</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Servidumbre/RegPrediosAfectados')" id="subitentamaño">Predios Afectados</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Servidumbre/PlanosAdjuntosServ')" id="subitentamaño">Planos Adj.</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Servidumbre/RepresentanteLegalServ')" id="subitentamaño">Rep. Legal</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#SubEstacion" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-globe" id="colorIcono"></i>SubEstación</a>
+                        <ul class="collapse list-unstyled" id="SubEstacion">
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")SubEstacion/BuscarSub')" id="subitentamaño" style="font-size: 15px">Buscar</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")SubEstacion/DatoSubestacion')" id="subitentamaño" style="font-size: 15px">Datos Sub. Estación</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#garantia" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-ok-circle" id="colorIcono"></i>Garantia</a>
+                        <ul class="collapse list-unstyled" id="garantia">
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Garantia/BuscarGar')" style="font-size: 15px">Buscar</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Garantia/GarantiaGar')" style="font-size: 15px">Garantía</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#normas" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-folder-open" id="colorIcono"></i>Normas</a>
+                        <ul class="collapse list-unstyled" id="normas">
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Normas/NormasTramite')" style="font-size: 15px">Normas de Trámite</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#reportes" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-list-alt" id="colorIcono"></i>Reportes</a>
+                        <ul class="collapse list-unstyled" id="reportes">
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Reportes/RepConcesiones')" style="font-size: 15px">Concesiones</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Reportes/RepUsuario')" style="font-size: 15px">Usuario</a></li>
+                        </ul>
+
+                    </li>
+                    <li>
+                        <a href="#seguridad" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-lock" id="colorIcono"></i>Seguridad</a>
+                        <ul class="collapse list-unstyled" id="seguridad">
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Seguridad/GruposSeg')" style="font-size: 15px">Grupos</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Seguridad/usuarioSeg')" style="font-size: 15px">Usuarios</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#tabla" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-cog" id="colorIcono"></i>Maestros</a>
+                        <ul class="collapse list-unstyled" id="tabla">
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Maestros/Parametros')" style="font-size: 15px">Parámetros</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Maestros/ProcesosTupa')" style="font-size: 15px">Procesos TUPA</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Parametros/Secuencias')" style="font-size: 15px">Secuencias</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Maestros/Auditoria')" style="font-size: 15px">Auditoría</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Maestros/Profesional')" style="font-size: 15px">Profesionales</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Maestros/Capitulos')" style="font-size: 15px">Capítulos</a></li>
+                            <li><a href="javascript: cargarPagina('@Url.Content("~")Maestros/Feriados')" style="font-size: 15px">Calendario</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+
+        </nav>
+
+        <!-- Page Content Holder Contenido  zoom:90% !important;-->
+        <div class="panel panel-default" id="divContenido" style="width:100%;">
+
+            <br />
+            <br />
+
+            <div style="width: 100%; text-align: center;">
+                <img src="~/Component/img/Ministerio.jpg" />
+            </div>
+
+            @RenderBody()
+        </div>
+        <!--Fin de Contenido-->
+    </div>
+
+    
+</body>
+</html>

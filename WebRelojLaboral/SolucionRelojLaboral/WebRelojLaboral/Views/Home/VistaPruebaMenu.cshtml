@@ -1,0 +1,160 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VistaPruebaMenu</title>
+</head>
+<body>
+    <nav id="sidebar">
+
+        <div class="container-fluid">
+            <a id="sidebarCollapse" class="tex-info navbar-btn pull-right">
+                <h3><i class="glyphicon glyphicon-align-justify"></i></h3>
+            </a>
+        </div>
+
+        <div style="overflow: scroll !important;">
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-home" id="colorIcono"></i>SISCE
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#expediente" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-globe" id="colorIcono"></i>
+                        Expedientes
+                    </a>
+                    <ul class="collapse list-unstyled" id="expediente">
+                        <li><a href="javascript: cargarPagina('/Expedientes/RegExpedienteEx');" id="subitentamaño">Reg. Expediente</a></li>
+                    </ul>
+                </li>
+                <li id="">
+                    <a href="#seguimiento" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-duplicate" id="colorIcono"></i>Seguimiento
+                    </a>
+                    <ul class="collapse list-unstyled " id="seguimiento">
+                        <li><a href="javascript: cargarPagina('/Seguimiento/ConsultarExpediente')" id="abierto">Consultar Expediente</a></li>
+                        <li><a href="javascript: cargarPagina('/Seguimiento/RegDocumentoEx')" id="subitentamaño">Documento</a></li>
+                        <li><a href="javascript: cargarPagina('/Seguimiento/AlarmarEx')" id="subitentamaño">Alarmas</a></li>
+                        <li><a href="javascript: cargarPagina('/Seguimiento/SegExpedienteEx')" id="subitentamaño">Seg. de Expedientes</a></li>
+                        <li><a href="javascript: cargarPagina('/Seguimiento/Verificacion')" id="subitentamaño">Verificacion</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#generación" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-pencil" id="colorIcono"></i>Generación</a>
+                    <ul class="collapse list-unstyled" id="generación">
+                        <li><a href="javascript: cargarPagina('/Generacion/Buscar')" id="subitentamaño">Buscar</a></li>
+                        <li><a href="javascript: cargarPagina('/Generacion/Solicitud')" id="subitentamaño">Solicitud</a></li>
+                        <li><a href="javascript: cargarPagina('/Generacion/Unidades')" id="subitentamaño">Unidades</a></li>
+                        <li><a href="javascript: cargarPagina('/Generacion/EstudioDeImpactoAmbiental')" id="subitentamaño">Est. Ambiental</a></li>
+                        <li><a href="javascript: cargarPagina('/Generacion/DerechoDeUsoDeAguas')" id="subitentamaño">Derechos de Agua</a></li>
+                        <li><a href="javascript: cargarPagina('/Generacion/PlanosAdjuntos')" id="subitentamaño">Planos Adj.</a></li>
+                        <li><a href="javascript: cargarPagina('/Generacion/Presupuesto')" id="subitentamaño">Presupuesto</a></li>
+                        <li><a href="javascript: cargarPagina('/Generacion/CronogramaDeEjecucion')" id="subitentamaño">Cronog. Ejec.</a></li>
+                        <li><a href="javascript: cargarPagina('/Generacion/Garantia')" id="subitentamaño">Garantía</a></li>
+                        <li><a href="javascript: cargarPagina('/Generacion/RepresentanteLegal')" id="subitentamaño">Rep. Legal</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#trasmision" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-random" id="colorIcono"></i>Transmisión</a>
+                    <ul class="collapse list-unstyled" id="trasmision">
+                        <li><a href="javascript: cargarPagina('/Transmision/BuscarTransmision')" id="subitentamaño">Buscar</a></li>
+                        <li><a href="javascript: cargarPagina('/Transmision/SolicitudTransmision')" id="subitentamaño">Solicitud</a></li>
+                        <li><a href="javascript: cargarPagina('/Transmision/LineasTransmision')" id="subitentamaño">Lineas</a></li>
+                        <li><a href="javascript: cargarPagina('/Transmision/DiagUnifilaresTransmision')" id="subitentamaño">Diag. Unifilares</a></li>
+                        <li><a href="javascript: cargarPagina('/Transmision/PlanosAdjTransmision')" id="subitentamaño">Planos Adj.</a></li>
+                        <li><a href="javascript: cargarPagina('/Transmision/EstAmbientalTransmision')" id="subitentamaño">Est. Ambiental</a></li>
+                        <li><a href="javascript: cargarPagina('/Transmision/PresupuestoTransmision')" id="subitentamaño">Presupuesto</a></li>
+                        <li><a href="javascript: cargarPagina('/Transmision/CronoEjecTransmision')" id="subitentamaño">Cronog. Ejec.</a></li>
+                        <li><a href="javascript: cargarPagina('/Transmision/GarantiaTransmision')" id="subitentamaño">Garantía</a></li>
+                        <li><a href="javascript: cargarPagina('/Generacion/RepresentanteLegal')" id="subitentamaño">Rep. Legal</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#distribución" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-phone" id="colorIcono"></i>Distribución</a>
+                    <ul class="collapse list-unstyled" id="distribución">
+                        <li><a href="javascript: cargarPagina('/Distribucion/BuscarDis')" id="subitentamaño">Buscar</a></li>
+                        <li><a href="javascript: cargarPagina('/Distribucion/SolicitudDis')" id="subitentamaño">Solicitud</a></li>
+                        <li><a href="javascript: cargarPagina('/Distribucion/ZonadeDistDis')" id="subitentamaño">Zonas de Dist.</a></li>
+                        <li><a href="javascript: cargarPagina('/Distribucion/PlanosAdjDis')" id="subitentamaño">Planos Adj.</a></li>
+                        <li><a href="javascript: cargarPagina('/Distribucion/EstAmbientalDis')" id="subitentamaño">Est. Ambiental</a></li>
+                        <li><a href="javascript: cargarPagina('/Distribucion/PresupuestoDis')" id="subitentamaño">Presupuesto</a></li>
+                        <li><a href="javascript: cargarPagina('/Distribucion/CronEjecDis')" id="subitentamaño">Cronog. Ejec.</a></li>
+                        <li><a href="javascript: cargarPagina('/Distribucion/GarantiaDis')" id="subitentamaño">Garantía</a></li>
+                        <li><a href="javascript: cargarPagina('/Generacion/RepresentanteLegal')" id="subitentamaño">Rep. Legal</a></li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="#servidumbre" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-inbox" id="colorIcono"></i>Servidumbre</a>
+                    <ul class="collapse list-unstyled" id="servidumbre">
+                        <li><a href="javascript: cargarPagina('/Servidumbre/BuscarServ')" id="subitentamaño">Buscar</a></li>
+                        <li><a href="javascript: cargarPagina('/Servidumbre/SolicitudServ')" id="subitentamaño">Solicitud</a></li>
+                        <li><a href="javascript: cargarPagina('/Servidumbre/RegPrediosAfectados')" id="subitentamaño">Predios Afectados</a></li>
+                        <li><a href="javascript: cargarPagina('/Servidumbre/PlanosAdjuntos')" id="subitentamaño">Planos Adj.</a></li>
+                        <li><a href="javascript: cargarPagina('/Generacion/RepresentanteLegal')" id="subitentamaño">Rep. Legal</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#SubEstacion" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-globe" id="colorIcono"></i>SubEstación</a>
+                    <ul class="collapse list-unstyled" id="SubEstacion">
+                        <li><a href="javascript: cargarPagina('/SubEstacion/BuscarSub')" id="subitentamaño" style="font-size: 15px">Buscar</a></li>
+                        <li><a href="javascript: cargarPagina('/SubEstacion/DatoSubestacion')" id="subitentamaño" style="font-size: 15px">Datos Sub. Estación</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#garantia" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-ok-circle" id="colorIcono"></i>Garantia</a>
+                    <ul class="collapse list-unstyled" id="garantia">
+                        <li><a href="javascript: cargarPagina('/Garantia/BuscarGar')" style="font-size: 15px">Buscar</a></li>
+                        <li><a href="javascript: cargarPagina('/Garantia/GarantiaGar')" style="font-size: 15px">Garantía</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#normas" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-folder-open" id="colorIcono"></i>Normas</a>
+                    <ul class="collapse list-unstyled" id="normas">
+                        <li><a href="javascript: cargarPagina('/Normas/NormasTramite')" style="font-size: 15px">Normas de Trámite</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#reportes" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-list-alt" id="colorIcono"></i>Reportes</a>
+                    <ul class="collapse list-unstyled" id="reportes">
+                        <li><a href="javascript: cargarPagina('/Reportes/Concesiones')" style="font-size: 15px">Concesiones</a></li>
+                        <li><a href="#" style="font-size: 15px">Ejemplo</a></li>
+                    </ul>
+
+                </li>
+                <li>
+                    <a href="#seguridad" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-lock" id="colorIcono"></i>Seguridad</a>
+                    <ul class="collapse list-unstyled" id="seguridad">
+                        <li><a href="javascript: cargarPagina('/Seguridad/GruposSeg')" style="font-size: 15px">Grupos</a></li>
+                        <li><a href="javascript: cargarPagina('/Seguridad/usuarioSeg')" style="font-size: 15px">Usuarios</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#tabla" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-cog" id="colorIcono"></i>Maestros</a>
+                    <ul class="collapse list-unstyled" id="tabla">
+                        <li><a href="javascript: cargarPagina('/Maestros/Parametros')" style="font-size: 15px">Parámetros</a></li>
+                        <li><a href="javascript: cargarPagina('/Maestros/ProcesosTupa')" style="font-size: 15px">Procesos TUPA</a></li>
+                        <li><a href="javascript: cargarPagina('/Parametros/Secuencias')" style="font-size: 15px">Secuencias</a></li>
+                        <li><a href="javascript: cargarPagina('/Parametros/Auditoria')" style="font-size: 15px">Auditoría</a></li>
+                        <li><a href="javascript: cargarPagina('/Maestros/Profesional')" style="font-size: 15px">Profesionales</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+
+    </nav>
+</body>
+</html>

@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RelojLaboralModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="RL_Asistencia">
+    <Key>
+      <PropertyRef Name="nAsiId" />
+    </Key>
+    <Property Name="nAsiId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nUsuId" Type="int" Nullable="false" />
+    <Property Name="cAsiIp" Type="varchar" MaxLength="50" />
+    <Property Name="cAsiHoraInicio" Type="varchar" MaxLength="50" />
+    <Property Name="cAsiHoraFinal" Type="varchar" MaxLength="50" />
+    <Property Name="cAsiDispositivo" Type="varchar" MaxLength="50" />
+    <Property Name="cAsiFecha" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="RL_CalendarioEstado">
+    <Key>
+      <PropertyRef Name="nCaEId" />
+    </Key>
+    <Property Name="nCaEId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nCaENombre" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="RL_CalendarioPersonal">
+    <Key>
+      <PropertyRef Name="nCaIId" />
+    </Key>
+    <Property Name="nCaIId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nDiaId" Type="int" />
+    <Property Name="nUsuId" Type="int" />
+    <Property Name="nEsCId" Type="int" />
+  </EntityType>
+  <EntityType Name="RL_Dia">
+    <Key>
+      <PropertyRef Name="nDiaId" />
+    </Key>
+    <Property Name="nDiaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cDiaNombre" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="RL_Geolocalizacion">
+    <Key>
+      <PropertyRef Name="nGeoId" />
+    </Key>
+    <Property Name="nGeoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cGeoDescripcion" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="RL_HorarioPersonal">
+    <Key>
+      <PropertyRef Name="nHoPId" />
+    </Key>
+    <Property Name="nHoPId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nHoTId" Type="int" Nullable="false" />
+    <Property Name="nDiaId" Type="int" Nullable="false" />
+    <Property Name="nUsuId" Type="int" Nullable="false" />
+    <Property Name="cHoPInicio" Type="varchar" MaxLength="50" />
+    <Property Name="cHoPFinal" Type="varchar" MaxLength="50" />
+    <Property Name="cHoPZonaHoraria" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RL_HorarioTipo">
+    <Key>
+      <PropertyRef Name="nHoTId" />
+    </Key>
+    <Property Name="nHoTId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cHoTDescripcion" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RL_Notificaciones">
+    <Key>
+      <PropertyRef Name="nNotId" />
+    </Key>
+    <Property Name="nNotId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cNotDescripcion" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="RL_Permisos">
+    <Key>
+      <PropertyRef Name="nPerId" />
+    </Key>
+    <Property Name="nPerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nPerDescripcion" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="RL_PreferenciaPersonal">
+    <Key>
+      <PropertyRef Name="nPInId" />
+    </Key>
+    <Property Name="nPInId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nPreId" Type="int" Nullable="false" />
+    <Property Name="nUsuId" Type="int" Nullable="false" />
+    <Property Name="nPerId" Type="int" Nullable="false" />
+    <Property Name="nNotId" Type="int" Nullable="false" />
+    <Property Name="nGeoId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RL_Preferencias">
+    <Key>
+      <PropertyRef Name="nPreId" />
+    </Key>
+    <Property Name="nPreId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cPreDescripcion" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RL_Roles">
+    <Key>
+      <PropertyRef Name="nRolId" />
+    </Key>
+    <Property Name="nRolId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cRolNombre" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="RL_Ubigeo">
+    <Key>
+      <PropertyRef Name="nUbiId" />
+    </Key>
+    <Property Name="nUbiId" Type="int" Nullable="false" />
+    <Property Name="cUbiDescripcion" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RL_Usuario">
+    <Key>
+      <PropertyRef Name="nUsuId" />
+    </Key>
+    <Property Name="nUsuId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nUbiId" Type="int" />
+    <Property Name="nRolId" Type="int" />
+    <Property Name="cUsuNombre" Type="varchar" MaxLength="50" />
+    <Property Name="cUsuApellido" Type="varchar" MaxLength="50" />
+    <Property Name="cUsuDNI" Type="varchar" MaxLength="20" />
+    <Property Name="cUsuCelular1" Type="varchar" MaxLength="15" />
+    <Property Name="cUsuCelular2" Type="varchar" MaxLength="15" />
+    <Property Name="cUsuEmail" Type="varchar" MaxLength="50" />
+    <Property Name="cUsuDomicilio" Type="varchar" MaxLength="100" />
+    <Property Name="cUsuPassword" Type="varchar" MaxLength="20" />
+    <Property Name="nUsEId" Type="int" />
+  </EntityType>
+  <EntityType Name="RL_UsuarioEstado">
+    <Key>
+      <PropertyRef Name="nUsEId" />
+    </Key>
+    <Property Name="nUsEId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cUsEDescripcion" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="RL_UsuarioGrupo">
+    <Key>
+      <PropertyRef Name="nUsGId" />
+    </Key>
+    <Property Name="nUsGId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nUsuId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK__RL_Calend__nDiaI__0C85DE4D">
+    <End Role="RL_Dia" Type="Self.RL_Dia" Multiplicity="0..1" />
+    <End Role="RL_CalendarioPersonal" Type="Self.RL_CalendarioPersonal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RL_Dia">
+        <PropertyRef Name="nDiaId" />
+      </Principal>
+      <Dependent Role="RL_CalendarioPersonal">
+        <PropertyRef Name="nDiaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RL_Calend__nEsCI__0E6E26BF">
+    <End Role="RL_CalendarioEstado" Type="Self.RL_CalendarioEstado" Multiplicity="0..1" />
+    <End Role="RL_CalendarioPersonal" Type="Self.RL_CalendarioPersonal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RL_CalendarioEstado">
+        <PropertyRef Name="nCaEId" />
+      </Principal>
+      <Dependent Role="RL_CalendarioPersonal">
+        <PropertyRef Name="nEsCId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RL_Calend__nUsuI__0D7A0286">
+    <End Role="RL_Usuario" Type="Self.RL_Usuario" Multiplicity="0..1" />
+    <End Role="RL_CalendarioPersonal" Type="Self.RL_CalendarioPersonal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RL_Usuario">
+        <PropertyRef Name="nUsuId" />
+      </Principal>
+      <Dependent Role="RL_CalendarioPersonal">
+        <PropertyRef Name="nUsuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RL_Asistencia_RL_Usuario">
+    <End Role="RL_Usuario" Type="Self.RL_Usuario" Multiplicity="1" />
+    <End Role="RL_Asistencia" Type="Self.RL_Asistencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RL_Usuario">
+        <PropertyRef Name="nUsuId" />
+      </Principal>
+      <Dependent Role="RL_Asistencia">
+        <PropertyRef Name="nUsuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RL_HorarioPersonal_RL_Usuario">
+    <End Role="RL_Usuario" Type="Self.RL_Usuario" Multiplicity="1" />
+    <End Role="RL_HorarioPersonal" Type="Self.RL_HorarioPersonal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RL_Usuario">
+        <PropertyRef Name="nUsuId" />
+      </Principal>
+      <Dependent Role="RL_HorarioPersonal">
+        <PropertyRef Name="nUsuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RL_Horarios_RL_Dia">
+    <End Role="RL_Dia" Type="Self.RL_Dia" Multiplicity="1" />
+    <End Role="RL_HorarioPersonal" Type="Self.RL_HorarioPersonal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RL_Dia">
+        <PropertyRef Name="nDiaId" />
+      </Principal>
+      <Dependent Role="RL_HorarioPersonal">
+        <PropertyRef Name="nDiaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RL_Horarios_RL_HorarioTipo">
+    <End Role="RL_HorarioTipo" Type="Self.RL_HorarioTipo" Multiplicity="1" />
+    <End Role="RL_HorarioPersonal" Type="Self.RL_HorarioPersonal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RL_HorarioTipo">
+        <PropertyRef Name="nHoTId" />
+      </Principal>
+      <Dependent Role="RL_HorarioPersonal">
+        <PropertyRef Name="nHoTId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RL_PreferenciaIndividual_RL_Geolocalizacion">
+    <End Role="RL_Geolocalizacion" Type="Self.RL_Geolocalizacion" Multiplicity="1" />
+    <End Role="RL_PreferenciaPersonal" Type="Self.RL_PreferenciaPersonal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RL_Geolocalizacion">
+        <PropertyRef Name="nGeoId" />
+      </Principal>
+      <Dependent Role="RL_PreferenciaPersonal">
+        <PropertyRef Name="nGeoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RL_PreferenciaIndividual_RL_Notificaciones">
+    <End Role="RL_Notificaciones" Type="Self.RL_Notificaciones" Multiplicity="1" />
+    <End Role="RL_PreferenciaPersonal" Type="Self.RL_PreferenciaPersonal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RL_Notificaciones">
+        <PropertyRef Name="nNotId" />
+      </Principal>
+      <Dependent Role="RL_PreferenciaPersonal">
+        <PropertyRef Name="nNotId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RL_PreferenciaIndividual_RL_Permisos">
+    <End Role="RL_Permisos" Type="Self.RL_Permisos" Multiplicity="1" />
+    <End Role="RL_PreferenciaPersonal" Type="Self.RL_PreferenciaPersonal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RL_Permisos">
+        <PropertyRef Name="nPerId" />
+      </Principal>
+      <Dependent Role="RL_PreferenciaPersonal">
+        <PropertyRef Name="nPerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RL_PreferenciaIndividual_RL_Preferencias">
+    <End Role="RL_Preferencias" Type="Self.RL_Preferencias" Multiplicity="1" />
+    <End Role="RL_PreferenciaPersonal" Type="Self.RL_PreferenciaPersonal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RL_Preferencias">
+        <PropertyRef Name="nPreId" />
+      </Principal>
+      <Dependent Role="RL_PreferenciaPersonal">
+        <PropertyRef Name="nPreId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RL_PreferenciaIndividual_RL_Usuario">
+    <End Role="RL_Usuario" Type="Self.RL_Usuario" Multiplicity="1" />
+    <End Role="RL_PreferenciaPersonal" Type="Self.RL_PreferenciaPersonal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RL_Usuario">
+        <PropertyRef Name="nUsuId" />
+      </Principal>
+      <Dependent Role="RL_PreferenciaPersonal">
+        <PropertyRef Name="nUsuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RL_Usuario_RL_Roles">
+    <End Role="RL_Roles" Type="Self.RL_Roles" Multiplicity="0..1" />
+    <End Role="RL_Usuario" Type="Self.RL_Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RL_Roles">
+        <PropertyRef Name="nRolId" />
+      </Principal>
+      <Dependent Role="RL_Usuario">
+        <PropertyRef Name="nRolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RL_Usuario_RL_Ubigeo">
+    <End Role="RL_Ubigeo" Type="Self.RL_Ubigeo" Multiplicity="0..1" />
+    <End Role="RL_Usuario" Type="Self.RL_Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RL_Ubigeo">
+        <PropertyRef Name="nUbiId" />
+      </Principal>
+      <Dependent Role="RL_Usuario">
+        <PropertyRef Name="nUbiId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RL_Usuario_RL_UsuarioEstado">
+    <End Role="RL_UsuarioEstado" Type="Self.RL_UsuarioEstado" Multiplicity="0..1" />
+    <End Role="RL_Usuario" Type="Self.RL_Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RL_UsuarioEstado">
+        <PropertyRef Name="nUsEId" />
+      </Principal>
+      <Dependent Role="RL_Usuario">
+        <PropertyRef Name="nUsEId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RL_UsuarioGrupo_RL_Usuario">
+    <End Role="RL_Usuario" Type="Self.RL_Usuario" Multiplicity="1" />
+    <End Role="RL_UsuarioGrupo" Type="Self.RL_UsuarioGrupo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RL_Usuario">
+        <PropertyRef Name="nUsuId" />
+      </Principal>
+      <Dependent Role="RL_UsuarioGrupo">
+        <PropertyRef Name="nUsuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="SelectCalendarioIndividual" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_del_RL_HorarioPersonal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nHoPId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_del_RL_Usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUsuId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_get_RL_Dia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_get_RL_HorarioTipo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_get_RL_Roles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_get_RL_Ubigeo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_get_RL_Usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_get_RL_UsuarioEstado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_getDNI_RL_Usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cUsuDNI" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getId_RL_Horario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUsuId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_getId_RL_Usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUsuId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_getValida_RL_Usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cUsuEmail" Type="varchar" Mode="In" />
+    <Parameter Name="cUsuPassword" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getX_RL_Usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cUsuNombre" Type="varchar" Mode="In" />
+    <Parameter Name="cUsuDNI" Type="varchar" Mode="In" />
+    <Parameter Name="cUsuApellido" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ins_RL_Asistencia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUsuId" Type="int" Mode="In" />
+    <Parameter Name="cAsiIp" Type="varchar" Mode="In" />
+    <Parameter Name="cAsiHoraInicio" Type="varchar" Mode="In" />
+    <Parameter Name="cAsiHoraFinal" Type="varchar" Mode="In" />
+    <Parameter Name="cAsiDispositivo" Type="varchar" Mode="In" />
+    <Parameter Name="cAsiFecha" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_ins_RL_HorarioPersonal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nHoTId" Type="int" Mode="In" />
+    <Parameter Name="nDiaId" Type="int" Mode="In" />
+    <Parameter Name="nUsuId" Type="int" Mode="In" />
+    <Parameter Name="cHoPInicio" Type="varchar" Mode="In" />
+    <Parameter Name="cHoPFinal" Type="varchar" Mode="In" />
+    <Parameter Name="cHoPZonaHoraria" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_ins_RL_Usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUbiId" Type="int" Mode="In" />
+    <Parameter Name="cUsuNombre" Type="varchar" Mode="In" />
+    <Parameter Name="cUsuApellido" Type="varchar" Mode="In" />
+    <Parameter Name="cUsuDNI" Type="varchar" Mode="In" />
+    <Parameter Name="cUsuCelular1" Type="varchar" Mode="In" />
+    <Parameter Name="cUsuCelular2" Type="varchar" Mode="In" />
+    <Parameter Name="cUsuEmail" Type="varchar" Mode="In" />
+    <Parameter Name="cUsuDomicilio" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upd_RL_Usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nUsuId" Type="int" Mode="In" />
+    <Parameter Name="nUbiId" Type="int" Mode="In" />
+    <Parameter Name="cUsuNombre" Type="varchar" Mode="In" />
+    <Parameter Name="cUsuApellido" Type="varchar" Mode="In" />
+    <Parameter Name="cUsuDNI" Type="varchar" Mode="In" />
+    <Parameter Name="cUsuCelular1" Type="varchar" Mode="In" />
+    <Parameter Name="cUsuCelular2" Type="varchar" Mode="In" />
+    <Parameter Name="cUsuEmail" Type="varchar" Mode="In" />
+    <Parameter Name="cUsuDomicilio" Type="varchar" Mode="In" />
+    <Parameter Name="cUsuPassword" Type="varchar" Mode="In" />
+    <Parameter Name="nUsEId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="RelojLaboralModelStoreContainer">
+    <EntitySet Name="RL_Asistencia" EntityType="Self.RL_Asistencia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RL_CalendarioEstado" EntityType="Self.RL_CalendarioEstado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RL_CalendarioPersonal" EntityType="Self.RL_CalendarioPersonal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RL_Dia" EntityType="Self.RL_Dia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RL_Geolocalizacion" EntityType="Self.RL_Geolocalizacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RL_HorarioPersonal" EntityType="Self.RL_HorarioPersonal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RL_HorarioTipo" EntityType="Self.RL_HorarioTipo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RL_Notificaciones" EntityType="Self.RL_Notificaciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RL_Permisos" EntityType="Self.RL_Permisos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RL_PreferenciaPersonal" EntityType="Self.RL_PreferenciaPersonal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RL_Preferencias" EntityType="Self.RL_Preferencias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RL_Roles" EntityType="Self.RL_Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RL_Ubigeo" EntityType="Self.RL_Ubigeo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RL_Usuario" EntityType="Self.RL_Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RL_UsuarioEstado" EntityType="Self.RL_UsuarioEstado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RL_UsuarioGrupo" EntityType="Self.RL_UsuarioGrupo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__RL_Calend__nDiaI__0C85DE4D" Association="Self.FK__RL_Calend__nDiaI__0C85DE4D">
+      <End Role="RL_Dia" EntitySet="RL_Dia" />
+      <End Role="RL_CalendarioPersonal" EntitySet="RL_CalendarioPersonal" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RL_Calend__nEsCI__0E6E26BF" Association="Self.FK__RL_Calend__nEsCI__0E6E26BF">
+      <End Role="RL_CalendarioEstado" EntitySet="RL_CalendarioEstado" />
+      <End Role="RL_CalendarioPersonal" EntitySet="RL_CalendarioPersonal" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RL_Calend__nUsuI__0D7A0286" Association="Self.FK__RL_Calend__nUsuI__0D7A0286">
+      <End Role="RL_Usuario" EntitySet="RL_Usuario" />
+      <End Role="RL_CalendarioPersonal" EntitySet="RL_CalendarioPersonal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RL_Asistencia_RL_Usuario" Association="Self.FK_RL_Asistencia_RL_Usuario">
+      <End Role="RL_Usuario" EntitySet="RL_Usuario" />
+      <End Role="RL_Asistencia" EntitySet="RL_Asistencia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RL_HorarioPersonal_RL_Usuario" Association="Self.FK_RL_HorarioPersonal_RL_Usuario">
+      <End Role="RL_Usuario" EntitySet="RL_Usuario" />
+      <End Role="RL_HorarioPersonal" EntitySet="RL_HorarioPersonal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RL_Horarios_RL_Dia" Association="Self.FK_RL_Horarios_RL_Dia">
+      <End Role="RL_Dia" EntitySet="RL_Dia" />
+      <End Role="RL_HorarioPersonal" EntitySet="RL_HorarioPersonal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RL_Horarios_RL_HorarioTipo" Association="Self.FK_RL_Horarios_RL_HorarioTipo">
+      <End Role="RL_HorarioTipo" EntitySet="RL_HorarioTipo" />
+      <End Role="RL_HorarioPersonal" EntitySet="RL_HorarioPersonal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RL_PreferenciaIndividual_RL_Geolocalizacion" Association="Self.FK_RL_PreferenciaIndividual_RL_Geolocalizacion">
+      <End Role="RL_Geolocalizacion" EntitySet="RL_Geolocalizacion" />
+      <End Role="RL_PreferenciaPersonal" EntitySet="RL_PreferenciaPersonal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RL_PreferenciaIndividual_RL_Notificaciones" Association="Self.FK_RL_PreferenciaIndividual_RL_Notificaciones">
+      <End Role="RL_Notificaciones" EntitySet="RL_Notificaciones" />
+      <End Role="RL_PreferenciaPersonal" EntitySet="RL_PreferenciaPersonal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RL_PreferenciaIndividual_RL_Permisos" Association="Self.FK_RL_PreferenciaIndividual_RL_Permisos">
+      <End Role="RL_Permisos" EntitySet="RL_Permisos" />
+      <End Role="RL_PreferenciaPersonal" EntitySet="RL_PreferenciaPersonal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RL_PreferenciaIndividual_RL_Preferencias" Association="Self.FK_RL_PreferenciaIndividual_RL_Preferencias">
+      <End Role="RL_Preferencias" EntitySet="RL_Preferencias" />
+      <End Role="RL_PreferenciaPersonal" EntitySet="RL_PreferenciaPersonal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RL_PreferenciaIndividual_RL_Usuario" Association="Self.FK_RL_PreferenciaIndividual_RL_Usuario">
+      <End Role="RL_Usuario" EntitySet="RL_Usuario" />
+      <End Role="RL_PreferenciaPersonal" EntitySet="RL_PreferenciaPersonal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RL_Usuario_RL_Roles" Association="Self.FK_RL_Usuario_RL_Roles">
+      <End Role="RL_Roles" EntitySet="RL_Roles" />
+      <End Role="RL_Usuario" EntitySet="RL_Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RL_Usuario_RL_Ubigeo" Association="Self.FK_RL_Usuario_RL_Ubigeo">
+      <End Role="RL_Ubigeo" EntitySet="RL_Ubigeo" />
+      <End Role="RL_Usuario" EntitySet="RL_Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RL_Usuario_RL_UsuarioEstado" Association="Self.FK_RL_Usuario_RL_UsuarioEstado">
+      <End Role="RL_UsuarioEstado" EntitySet="RL_UsuarioEstado" />
+      <End Role="RL_Usuario" EntitySet="RL_Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RL_UsuarioGrupo_RL_Usuario" Association="Self.FK_RL_UsuarioGrupo_RL_Usuario">
+      <End Role="RL_Usuario" EntitySet="RL_Usuario" />
+      <End Role="RL_UsuarioGrupo" EntitySet="RL_UsuarioGrupo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

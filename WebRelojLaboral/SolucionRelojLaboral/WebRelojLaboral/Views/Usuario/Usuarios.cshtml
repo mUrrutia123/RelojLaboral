@@ -1,0 +1,201 @@
+﻿
+@{
+    ViewBag.Title = "Usuarios";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Lista de Usuarios</h2>
+
+
+
+<div class="container" style="margin-left:10%">
+    <div id="idAlertEliminar" class="w-75">
+
+
+    </div>
+    <div id="cardListaUsuarios">
+
+
+
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitleUsuario"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="idAlertaSucesos">
+
+                </div>
+                <input type="hidden" id="INPUTnUsuId" class="form-control">
+                <div class="row">
+                    <div class="col-md-6">
+                        <select class="form-control" id="selectubiUsuario"></select>
+                        <br />
+                        <select class="form-control" id="selectRolUsuario"></select>
+                        <br />
+                        <input type="text" id="INPUTcUsuNom" class="form-control">
+                        <br />
+                        <input type="text" id="INPUTcUsuApe" class="form-control" />
+                        <br />
+                        <input type="text" id="INPUTcUsuDni" class="form-control" />
+                        <br />
+                        <input type="text" id="INPUTcUsuCel1" class="form-control" />
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" id="INPUTcUsuCel2" class="form-control" />
+                        <br />
+                        <input type="text" id="INPUTcUsuEmail" class="form-control" />
+                        <br />
+                        <input type="text" id="INPUTcUsuDomicilio" class="form-control" />
+                        <br />
+                        <input type="text" id="INPUTcUsupwd" class="form-control" />
+                        <br />
+                        <select class="form-control" id="selectEstadoUsuario"></select>
+                        <br />
+                        <button type="button" class="btn btn-primary" id="btnActualizarUsuario">Guardar</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalHorarioUs" tabindex="-1" role="dialog" aria-labelledby="exampleModalHorarioUsTitle" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="h5exampleModalHorarioUs"></h5>
+                <button type="button" class="close" id="btncerrarmodal2" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div id="idAlertaSucesos1">
+
+                    </div>
+                    <div class="card" style="background:#4db6ac;">
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-md-2" style="margin-top:10px;">
+                                    <input type="radio" aria-label="Radio button for following text input" id="idchecked1" />
+                                </div>
+
+                                <div class="col-md-10">
+                                    <h2>Sin Horario</h2>
+                                </div>
+
+                            </div>
+
+                            @*<div class="collapse" id="collapseExample">
+
+                                </div>*@
+                            <div class="card card-body" style="background:#82e9de;" id="idbodycardradio1">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                            </div>
+                        </div>
+
+                    </div>
+                    <br />
+                    <div class="card" style="background:#4db6ac;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2" style="margin-top:10px;">
+                                    <input type="radio" aria-label="Radio button for following text input" id="idchecked2">
+                                    
+                                </div>
+                                <div class="col-md-10">
+                                    <h2>Con Horario</h2>
+                                </div>
+                            </div>
+
+                            <div class="card card-body" style="background:#82e9de;" id="idbodycardradio2">
+                                <div class="container">
+                                    
+                                    
+                                    <div class="row" >
+                                        <div class="col-md-4">
+                                            <center><h5>Día</h5></center>
+</div>
+                                        <div class="col-md-3">
+                                            <center><h5>Hora Inicio</h5></center>
+</div>
+                                        <div class="col-md-3">
+                                            <center><h5>Hora Final</h5></center>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <center><h5>#</h5></center>
+                                        </div>
+                                    </div>
+                                    <div class="row" id="idTablaHorarioUs">
+
+                                    </div>
+                                    <br>
+                                    <button class="btn btn-primary" id="idNuevoHorario">Nuevo</button>
+                                    <br>
+                                    <br>
+
+
+                                    <div class="row panel-body" id="rowHorarioUsuario" >
+                                        <div class='col-md-3'>
+                                            <select class='form-control' id='selectComboDia'>
+
+                                            </select>
+                                            </div>
+                                            <div class='col-md-3'>
+                                                <select class='form-control' id='selectComboTipoHorario'>
+                                                    
+                                                </select>
+                                            </div>
+                                                <div class='col-md-2'>
+                                                <center><input type='time' class='form-control' maxlength='5' id='txtinicioHorario' /></center>
+                                                
+                                                </div>
+                                                <div class='col-md-2'>
+                                                <center><input type='time' class='form-control' maxlength='5' id='txtfinHorario' /></center>
+                                                
+                                                </div>
+                                                <div class='col-md-2'>
+                                                <center>
+                                                    <a type='button' onclick='AgregarHorarioPersonal(" + ids + ")' id='btnGuardarHorarioUsuario'>
+                                                       <i class='material-icons' style='margin-top:5%;'>archive</i>
+                                                        
+                                                    </a>
+
+                                                </center>
+
+                                                </div>
+                                        </div>
+                                     </div>
+                                    <br />
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
